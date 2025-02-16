@@ -10,6 +10,7 @@ namespace NumberGuessingApp
         }
         //Guess Button
         // I guesssssssssss
+        // dagdag pa to wala na nga review tom eh
         private void play_button_Click(object sender, EventArgs e)
         {
             Random random = new Random(); //using random
