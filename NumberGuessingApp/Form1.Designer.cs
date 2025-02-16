@@ -33,6 +33,7 @@
             textBox1 = new TextBox();
             exit_button = new Button();
             pictureBox1 = new PictureBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -85,6 +86,21 @@
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.LavenderBlush;
+            button1.BackgroundImageLayout = ImageLayout.None;
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Cooper Black", 11.25F);
+            button1.ForeColor = SystemColors.ControlDarkDark;
+            button1.Location = new Point(191, 314);
+            button1.Name = "button1";
+            button1.Size = new Size(89, 34);
+            button1.TabIndex = 5;
+            button1.Text = "HINT!!!";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -92,6 +108,7 @@
             BackColor = Color.LemonChiffon;
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(471, 403);
+            Controls.Add(button1);
             Controls.Add(pictureBox1);
             Controls.Add(exit_button);
             Controls.Add(textBox1);
@@ -102,6 +119,7 @@
             MinimizeBox = false;
             Name = "Form1";
             Text = "Number Guessing";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -110,8 +128,10 @@
         #endregion
 
         private Button play_button;
+        private Button hint_button;
         private TextBox textBox1;
         private Button exit_button;
         public PictureBox pictureBox1;
+        private Button button1;
     }
 }
