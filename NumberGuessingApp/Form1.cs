@@ -100,7 +100,7 @@ namespace NumberGuessingApp
             hintUsed = true;
         }
 
-        private void exit_button_Click(object sender, EventArgs e)git
+        private void exit_button_Click(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("Do you want to exit?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
