@@ -35,6 +35,7 @@
             pictureBox1 = new PictureBox();
             button1 = new Button();
             scoreLabel = new Label();
+            chooseLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -46,10 +47,9 @@
             play_button.FlatStyle = FlatStyle.Popup;
             play_button.Font = new Font("Cooper Black", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             play_button.ForeColor = SystemColors.ControlDarkDark;
-            play_button.Location = new Point(141, 325);
-            play_button.Margin = new Padding(3, 4, 3, 4);
+            play_button.Location = new Point(123, 244);
             play_button.Name = "play_button";
-            play_button.Size = new Size(102, 57);
+            play_button.Size = new Size(89, 43);
             play_button.TabIndex = 0;
             play_button.Text = "Guess";
             play_button.UseVisualStyleBackColor = false;
@@ -59,10 +59,9 @@
             // 
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Arial Rounded MT Bold", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(207, 244);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
+            textBox1.Location = new Point(182, 194);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(129, 40);
+            textBox1.Size = new Size(113, 32);
             textBox1.TabIndex = 1;
             textBox1.TextAlign = HorizontalAlignment.Center;
             // 
@@ -72,10 +71,9 @@
             exit_button.FlatStyle = FlatStyle.Popup;
             exit_button.Font = new Font("Cooper Black", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             exit_button.ForeColor = Color.DimGray;
-            exit_button.Location = new Point(298, 325);
-            exit_button.Margin = new Padding(3, 4, 3, 4);
+            exit_button.Location = new Point(261, 244);
             exit_button.Name = "exit_button";
-            exit_button.Size = new Size(103, 57);
+            exit_button.Size = new Size(90, 43);
             exit_button.TabIndex = 3;
             exit_button.Text = "Exit";
             exit_button.UseVisualStyleBackColor = false;
@@ -83,14 +81,13 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, -83);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(-4, -142);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(514, 297);
+            pictureBox1.Size = new Size(486, 288);
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // button1
             // 
@@ -99,10 +96,9 @@
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Cooper Black", 11.25F);
             button1.ForeColor = SystemColors.ControlDarkDark;
-            button1.Location = new Point(218, 419);
-            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Location = new Point(191, 314);
             button1.Name = "button1";
-            button1.Size = new Size(102, 45);
+            button1.Size = new Size(89, 34);
             button1.TabIndex = 5;
             button1.Text = "HINT!!!";
             button1.UseVisualStyleBackColor = false;
@@ -111,20 +107,31 @@
             // scoreLabel
             // 
             scoreLabel.AutoSize = true;
-            scoreLabel.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            scoreLabel.Location = new Point(200, 120); // Set the location of the score label
+            scoreLabel.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            scoreLabel.Location = new Point(194, 371);
             scoreLabel.Name = "scoreLabel";
-            scoreLabel.Size = new Size(0, 18);
+            scoreLabel.Size = new Size(86, 22);
             scoreLabel.TabIndex = 7;
-            scoreLabel.Text = "Score: 0"; // Initialize the score label text
+            scoreLabel.Text = "Score: 0";
+            // 
+            // chooseLabel
+            // 
+            chooseLabel.AutoSize = true;
+            chooseLabel.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            chooseLabel.Location = new Point(123, 161);
+            chooseLabel.Name = "chooseLabel";
+            chooseLabel.Size = new Size(246, 18);
+            chooseLabel.TabIndex = 8;
+            chooseLabel.Text = "Choose a number from 1 to 10";
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LemonChiffon;
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(471, 403);
+            ClientSize = new Size(476, 413);
+            Controls.Add(chooseLabel);
             Controls.Add(scoreLabel);
             Controls.Add(button1);
             Controls.Add(pictureBox1);
@@ -134,7 +141,6 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Location = new Point(20, 20);
-            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Form1";
@@ -154,5 +160,6 @@
         public PictureBox pictureBox1;
         private Button button1;
         private Label scoreLabel;
+        private Label chooseLabel;
     }
 }
