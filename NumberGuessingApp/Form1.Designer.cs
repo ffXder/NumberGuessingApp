@@ -83,7 +83,7 @@
             // 
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(-4, -142);
+            pictureBox1.Location = new Point(-4, -148);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(486, 288);
             pictureBox1.TabIndex = 4;
@@ -107,10 +107,10 @@
             // scoreLabel
             // 
             scoreLabel.AutoSize = true;
-            scoreLabel.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            scoreLabel.Location = new Point(194, 371);
+            scoreLabel.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            scoreLabel.Location = new Point(191, 369);
             scoreLabel.Name = "scoreLabel";
-            scoreLabel.Size = new Size(86, 22);
+            scoreLabel.Size = new Size(94, 24);
             scoreLabel.TabIndex = 7;
             scoreLabel.Text = "Score: 0";
             // 
@@ -144,6 +144,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Number Guessing";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -154,11 +155,11 @@
         #endregion
 
         private Button play_button;
-        private Button hint_button;
+        private Button button1;
         private TextBox textBox1;
         private Button exit_button;
         public PictureBox pictureBox1;
-        private Button button1;
+        private Button hint_button;
         private Label scoreLabel;
         private Label chooseLabel;
     }

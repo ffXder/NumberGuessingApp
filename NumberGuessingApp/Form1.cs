@@ -53,15 +53,17 @@ namespace NumberGuessingApp
 
             int userGuess = Convert.ToInt32(textBox1.Text); // Convert input to integer
 
+            //Scoring System
             if (userGuess == guessNumber)
             { score += 100; // Increase score for correct guess
                 MessageBox.Show($"You guessed it right!\nThe correct number was {guessNumber}.");
-                if(score < 50) { 
+                if(score < 50) 
+                { 
                 MessageBox.Show($"Your score: {score}. better luck next time!!!");
-                
                 }
                 else
                 {
+                    scoreLabel.Text = $"Score: {score}";
                     MessageBox.Show($"Your score: {score}. Good job!!!");
                 }
                   
