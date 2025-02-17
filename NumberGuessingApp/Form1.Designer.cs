@@ -59,7 +59,7 @@
             // 
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Arial Rounded MT Bold", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(182, 196);
+            textBox1.Location = new Point(182, 193);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(113, 32);
             textBox1.TabIndex = 1;
