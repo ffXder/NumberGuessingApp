@@ -34,6 +34,7 @@
             exit_button = new Button();
             pictureBox1 = new PictureBox();
             button1 = new Button();
+            scoreLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -85,6 +86,7 @@
             pictureBox1.Size = new Size(523, 282);
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // button1
             // 
@@ -101,6 +103,16 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // scoreLabel
+            // 
+            scoreLabel.AutoSize = true;
+            scoreLabel.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            scoreLabel.Location = new Point(200, 120); // Set the location of the score label
+            scoreLabel.Name = "scoreLabel";
+            scoreLabel.Size = new Size(0, 18);
+            scoreLabel.TabIndex = 7;
+            scoreLabel.Text = "Score: 0"; // Initialize the score label text
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -108,6 +120,7 @@
             BackColor = Color.LemonChiffon;
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(471, 403);
+            Controls.Add(scoreLabel);
             Controls.Add(button1);
             Controls.Add(pictureBox1);
             Controls.Add(exit_button);
@@ -133,5 +146,6 @@
         private Button exit_button;
         public PictureBox pictureBox1;
         private Button button1;
+        private Label scoreLabel;
     }
 }
