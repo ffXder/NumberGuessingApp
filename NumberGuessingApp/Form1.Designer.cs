@@ -59,7 +59,7 @@
             // 
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Arial Rounded MT Bold", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(182, 194);
+            textBox1.Location = new Point(182, 196);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(113, 32);
             textBox1.TabIndex = 1;
@@ -96,9 +96,9 @@
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Cooper Black", 11.25F);
             button1.ForeColor = SystemColors.ControlDarkDark;
-            button1.Location = new Point(191, 314);
+            button1.Location = new Point(182, 314);
             button1.Name = "button1";
-            button1.Size = new Size(89, 34);
+            button1.Size = new Size(98, 34);
             button1.TabIndex = 5;
             button1.Text = "HINT!!!";
             button1.UseVisualStyleBackColor = false;
@@ -106,11 +106,10 @@
             // 
             // scoreLabel
             // 
-            scoreLabel.AutoSize = true;
             scoreLabel.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            scoreLabel.Location = new Point(191, 369);
+            scoreLabel.Location = new Point(182, 365);
             scoreLabel.Name = "scoreLabel";
-            scoreLabel.Size = new Size(94, 24);
+            scoreLabel.Size = new Size(98, 24);
             scoreLabel.TabIndex = 7;
             scoreLabel.Text = "Score: 0";
             // 

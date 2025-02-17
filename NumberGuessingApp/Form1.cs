@@ -27,7 +27,6 @@ namespace NumberGuessingApp
             guessNumber = random.Next(1, 10);
             guessTries = 3;
             hintUsed = false;
-            score = 0; // Reset score
             scoreLabel.Text = $"Score: {score}"; // Update score label
             MessageBox.Show("New game started! You have 3 tries and 1 hint.");
         }
