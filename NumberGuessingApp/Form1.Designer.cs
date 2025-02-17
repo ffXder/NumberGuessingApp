@@ -45,9 +45,10 @@
             play_button.FlatStyle = FlatStyle.Popup;
             play_button.Font = new Font("Cooper Black", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             play_button.ForeColor = SystemColors.ControlDarkDark;
-            play_button.Location = new Point(123, 244);
+            play_button.Location = new Point(141, 325);
+            play_button.Margin = new Padding(3, 4, 3, 4);
             play_button.Name = "play_button";
-            play_button.Size = new Size(89, 43);
+            play_button.Size = new Size(102, 57);
             play_button.TabIndex = 0;
             play_button.Text = "Guess";
             play_button.UseVisualStyleBackColor = false;
@@ -57,9 +58,10 @@
             // 
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Arial Rounded MT Bold", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(181, 183);
+            textBox1.Location = new Point(207, 244);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(113, 32);
+            textBox1.Size = new Size(129, 40);
             textBox1.TabIndex = 1;
             textBox1.TextAlign = HorizontalAlignment.Center;
             // 
@@ -69,9 +71,10 @@
             exit_button.FlatStyle = FlatStyle.Popup;
             exit_button.Font = new Font("Cooper Black", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             exit_button.ForeColor = Color.DimGray;
-            exit_button.Location = new Point(261, 244);
+            exit_button.Location = new Point(298, 325);
+            exit_button.Margin = new Padding(3, 4, 3, 4);
             exit_button.Name = "exit_button";
-            exit_button.Size = new Size(90, 43);
+            exit_button.Size = new Size(103, 57);
             exit_button.TabIndex = 3;
             exit_button.Text = "Exit";
             exit_button.UseVisualStyleBackColor = false;
@@ -80,9 +83,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(-5, -154);
+            pictureBox1.Location = new Point(12, -83);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(523, 282);
+            pictureBox1.Size = new Size(514, 297);
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             // 
@@ -93,9 +97,10 @@
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Cooper Black", 11.25F);
             button1.ForeColor = SystemColors.ControlDarkDark;
-            button1.Location = new Point(191, 314);
+            button1.Location = new Point(218, 419);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(89, 34);
+            button1.Size = new Size(102, 45);
             button1.TabIndex = 5;
             button1.Text = "HINT!!!";
             button1.UseVisualStyleBackColor = false;
@@ -103,18 +108,20 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LemonChiffon;
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(471, 403);
+            ClientSize = new Size(538, 537);
             Controls.Add(button1);
             Controls.Add(pictureBox1);
             Controls.Add(exit_button);
             Controls.Add(textBox1);
             Controls.Add(play_button);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Location = new Point(20, 20);
+            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Form1";

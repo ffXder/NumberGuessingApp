@@ -23,7 +23,7 @@ namespace NumberGuessingApp
             guessNumber = random.Next(1, 10);
             guessTries = 3;
             hintUsed = false;
-            MessageBox.Show("New game started! You have 3 tries and 1 hint.");
+            //MessageBox.Show("New game started! You have 3 tries and 1 hint.");
         }
 
         // Event handler for the Guess button (play_button)
@@ -100,7 +100,7 @@ namespace NumberGuessingApp
             hintUsed = true;
         }
 
-        private void exit_button_Click(object sender, EventArgs e)
+        private void exit_button_Click(object sender, EventArgs e)git
         {
             DialogResult dr = MessageBox.Show("Do you want to exit?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
