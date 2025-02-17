@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using System;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
 
 namespace NumberGuessingApp
 {
@@ -10,6 +12,8 @@ namespace NumberGuessingApp
         private int guessTries = 3;
         private bool hintUsed = false;
         private Random random = new Random();
+        private int score = 0;
+
 
         public Form1()
         {
@@ -23,10 +27,14 @@ namespace NumberGuessingApp
             guessNumber = random.Next(1, 10);
             guessTries = 3;
             hintUsed = false;
-            //MessageBox.Show("New game started! You have 3 tries and 1 hint.");
+            score = 0; // Reset score
+            scoreLabel.Text = $"Score: {score}"; // Update score label
+            MessageBox.Show("New game started! You have 3 tries and 1 hint.");
         }
 
         // Event handler for the Guess button (play_button)
+        
+
         private void play_button_Click(object sender, EventArgs e)
         {
             if (guessTries <= 0)
@@ -46,24 +54,37 @@ namespace NumberGuessingApp
             int userGuess = Convert.ToInt32(textBox1.Text); // Convert input to integer
 
             if (userGuess == guessNumber)
-            {
-                MessageBox.Show($"You guessed it right!\nThe correct number was {guessNumber}");
-                StartNewGame();
+            { score += 100; // Increase score for correct guess
+                MessageBox.Show($"You guessed it right!\nThe correct number was {guessNumber}.");
+                if(score < 50) { 
+                MessageBox.Show($"Your score: {score}. better luck next time!!!");
+                
+                }
+                else
+                {
+                    MessageBox.Show($"Your score: {score}. Good job!!!");
+                }
+                  
+                    StartNewGame();
             }
             else
             {
                 guessTries--; // Reduces yung tries
+                score -= 25; // Decrease score for incorrect guess
                 if (guessTries > 0)
                 {
                     MessageBox.Show($"❌ Wrong! Try again.\nYou have {guessTries} guesses left.");
                 }
                 else
                 {
-                    MessageBox.Show($"❌ Game Over! The correct number was {guessNumber}.\nStarting a new game...");
-                    StartNewGame();
+                    {
+                        MessageBox.Show($"❌ Game Over! The correct number was {guessNumber}.\nYour score: {score}\nStarting a new game...");
+                        StartNewGame();
+                    }
                 }
             }
 
+            scoreLabel.Text = $"Score: {score}"; // Update score label
             textBox1.Clear();
         }
 
@@ -110,6 +131,11 @@ namespace NumberGuessingApp
             }
         }
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
